@@ -21,7 +21,7 @@ namespace Library.Api.Controllers
             _logger = logger;
         }
 
-        [HttpGet("GetMessages/{queueName}")]
+        [HttpGet("GetMessages")]
         public IActionResult GetMessagesFromQueue(string queueName)
         {
             try
