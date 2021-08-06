@@ -21,7 +21,7 @@ namespace Library.Api.Controllers
             _logger = logger;
         }
 
-        [HttpGet("GetMessages")]
+        [HttpGet("{queueName}")]
         public IActionResult GetMessagesFromQueue(string queueName)
         {
             try
@@ -44,7 +44,7 @@ namespace Library.Api.Controllers
             }
         }
 
-        [HttpPost("ConfirmDeliveryMessage")]
+        [HttpPost]
         public IActionResult ConfirmDeliveryMessage(IEnumerable<Message> messages)
         {
             try
