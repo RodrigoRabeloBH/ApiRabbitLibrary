@@ -30,8 +30,6 @@ namespace Library.Api.Controllers
 
                 if (messages.Any())
                 {
-                    ConfirmDeliveryMessage(messages);
-
                     return Ok(messages);
                 }
                 return NoContent();
